@@ -6,3 +6,10 @@ __pycache__/
 .env
 .env.*
 !.env.example
+.pytest_cache/
+
+# Generated at run time (clean-start procedure removes these)
+gateway/downloads/*
+!gateway/downloads/.gitkeep
+ecu_simulator/slot_b/*
+!ecu_simulator/slot_b/.gitkeep

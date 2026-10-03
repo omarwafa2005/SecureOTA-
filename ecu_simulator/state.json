@@ -1,0 +1,7 @@
+{
+  "ecu_id": "ECU-A",
+  "hardware_id": "HW-A-01",
+  "installed_version": 1,
+  "active_slot": "A",
+  "staged_version": null
+}
