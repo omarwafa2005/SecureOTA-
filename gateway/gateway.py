@@ -1,7 +1,9 @@
-
 import requests
+from pathlib import Path
 
 BASE_URL = "http://127.0.0.1:8000"
+
+DOWNLOAD_DIR = Path(__file__).parent / "downloads"
 
 
 def check_backend():
@@ -92,6 +94,43 @@ def validate_update_info(update_info):
     return True
 
 
+def download_firmware(update_info):
+    print("\nDownloading firmware...")
+
+    DOWNLOAD_DIR.mkdir(parents=True, exist_ok=True)
+
+    filename = update_info["filename"]
+    download_url = update_info["download_url"]
+
+    firmware_url = f"{BASE_URL}{download_url}"
+    output_path = DOWNLOAD_DIR / filename
+
+    try:
+        response = requests.get(
+            firmware_url,
+            timeout=10
+        )
+
+        response.raise_for_status()
+
+        if not response.content:
+            print("Download failed: Firmware file is empty")
+            return None
+
+        with open(output_path, "wb") as firmware_file:
+            firmware_file.write(response.content)
+
+        print("Firmware downloaded successfully!")
+        print("Saved to:", output_path)
+        print("File size:", len(response.content), "bytes")
+
+        return output_path
+
+    except requests.RequestException as error:
+        print("Firmware download failed:", error)
+        return None
+
+
 if __name__ == "__main__":
 
     if check_backend():
@@ -99,4 +138,7 @@ if __name__ == "__main__":
         update_info = get_update_info()
 
         if update_info:
-            validate_update_info(update_info)
+
+            if validate_update_info(update_info):
+
+                firmware_path = download_firmware(update_info)
