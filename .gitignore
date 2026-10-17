@@ -13,3 +13,7 @@ gateway/downloads/*
 !gateway/downloads/.gitkeep
 ecu_simulator/slot_b/*
 !ecu_simulator/slot_b/.gitkeep
+# Phase 2 generated evidence (recreate with: cd phase2 && python run_all.py)
+phase2/evidence/
+*.pem
+*.key
