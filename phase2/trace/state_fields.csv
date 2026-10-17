@@ -1,0 +1,32 @@
+field,location,type,producer,consumer,validation,trust
+ecu_id,ECU state.json,str,Provisioning,Gateway; manifest; backend,Non-empty; equals metadata ecu_id,Trusted persistent
+hardware_id,ECU state.json,str,Provisioning,Gateway; manifest; backend,Non-empty; equals metadata hardware_id,Trusted persistent
+active_slot,ECU state.json,A|B,ECU activate / rollback,Boot; manifest,One of A or B,Trusted persistent
+confirmed_slot,ECU state.json,A|B,ECU confirm_health,Rollback; staging guard,One of A or B; never written by staging,Trusted persistent
+slots.<X>.version,ECU state.json,int,ECU stage (from verified metadata),Manifest; anti-rollback,>= trusted_min_version when written,Trusted persistent
+slots.<X>.sha256,ECU state.json,hex64,ECU stage (computed from bytes),Activate and boot integrity checks,64 lowercase hex; equals metadata sha256,Trusted persistent
+slots.<X>.length,ECU state.json,int,ECU stage,Integrity checks,Equals metadata length,Trusted persistent
+trusted_min_version,ECU state.json,int,Provisioning; ECU confirm_health,Gateway and ECU anti-rollback,Monotonic non-decreasing,Trusted persistent
+update_state,ECU state.json,enum,ECU state machine,Gateway; manifest; recovery,One of IDLE STAGING STAGED INSTALLED CONFIRMED REJECTED ROLLED_BACK,Trusted persistent
+staged_version,ECU state.json,int|null,ECU stage,Manifest; idempotency check,Set only in STAGED or INSTALLED,Trusted persistent
+boot_attempts,ECU state.json,int,ECU boot,ECU boot limit,0..max_boot_attempts+1,Trusted persistent
+last_correlation_id,ECU state.json,str|null,ECU (from caller),Audit on recovery,Opaque ID,Trusted persistent
+generation,ECU state.json,int,ECU commit,Debug / ordering,Increments by 1 per commit,Trusted persistent
+accepted.<ecu>.metadata_version,gateway_state.json,int,Gateway after successful stage,Replay check,Monotonic non-decreasing,Trusted persistent
+accepted.<ecu>.payload_sha256,gateway_state.json,hex64,Gateway after successful stage,Idempotency check,64 lowercase hex,Trusted persistent
+artifact_id,Signed metadata,str,Backend release,Gateway fetch,Non-empty; used only after signature check,Untrusted until verified
+campaign_id,Signed metadata,str,Backend campaign,Gateway bundle check,Equals bundle campaign_id,Untrusted until verified
+vehicle_id,Signed metadata,str,Backend campaign,Gateway,Equals gateway vehicle_id,Untrusted until verified
+version,Signed metadata,int,Backend release,Gateway and ECU,>= trusted_min_version and != confirmed version,Untrusted until verified
+metadata_version,Signed metadata,int,Backend release,Gateway replay check,>= 1 and >= last accepted,Untrusted until verified
+length,Signed metadata,int,Backend release,Gateway downloader,1..max_artifact_bytes,Untrusted until verified
+sha256,Signed metadata,hex64,Backend release,Gateway and ECU digest checks,64 lowercase hex,Untrusted until verified
+expires_at,Signed metadata,int (epoch s),Backend release,Gateway freshness check,> trusted clock,Untrusted until verified
+key_id,Metadata envelope,str,Backend signer,Gateway key lookup,In trusted set and not revoked,Untrusted
+sig,Metadata envelope,hex,Backend signer,Gateway Ed25519 verify,Valid hex; verifies,Untrusted
+firmware bytes,Download stream,bytes,Artifact repository,Gateway then ECU,Length and SHA-256 equal metadata,Untrusted until verified
+speed_kph,Vehicle conditions,float,Simulated vehicle bus,ECU safety policy,Finite and exactly 0 to allow activation,Untrusted input
+battery_v,Vehicle conditions,float,Simulated vehicle bus,ECU safety policy,Finite and >= min_battery_v,Untrusted input
+ignition,Vehicle conditions,str,Simulated vehicle bus,ECU safety policy,In allowed_ignition (ON),Untrusted input
+gear,Vehicle conditions,str,Simulated vehicle bus,ECU safety policy,P when require_park,Untrusted input
+diagnostic_session,Vehicle conditions,bool,Simulated vehicle bus,ECU safety policy,Must be exactly False,Untrusted input
