@@ -3,7 +3,7 @@
 Signatures use Ed25519 from the `cryptography` library. No cryptographic
 primitive is designed here (working rule, Section 1). The envelope format is
 a Phase 2 placeholder; the final metadata design (Uptane/TUF-informed) is a
-Phase 3 decision owned by Student 3.
+Phase 3 decision owned by S3.
 
 Envelope:   {"signed": {...target fields...}, "key_id": str, "sig": hex}
 """

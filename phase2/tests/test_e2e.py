@@ -1,4 +1,4 @@
-"""End-to-end tests across backend, signing service and vehicle (all students).
+"""End-to-end tests across backend, signing service and vehicle (all workstreams).
 
 Docstring format: <test ID> | <threat IDs or -> | <requirement IDs>.
 AT-18 is the tampered-firmware trace used in the final review (slot 3:15-4:15).

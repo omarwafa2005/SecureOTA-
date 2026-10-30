@@ -1,8 +1,8 @@
 """Shared fixture: backend + signing service + trust store + simulated vehicle.
 
 Connects the three work packages for integration tests: the OEM backend
-(Student 2) signs offers through the signing service (Student 3), and the
-vehicle gateway (Student 1) trusts only release keys from a root-signed key
+(S2) signs offers through the signing service (S3), and the
+vehicle gateway (S1) trusts only release keys from a root-signed key
 set. Tokens and keys are random per run; nothing secret is committed (SR-10).
 """
 from __future__ import annotations

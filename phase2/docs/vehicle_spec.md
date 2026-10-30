@@ -1,6 +1,6 @@
-# SecureOTA-V Merged Phase 2 — Student 1: Vehicle, Gateway and ECU
+# SecureOTA-V Merged Phase 2 — S1: Vehicle, Gateway and ECU
 
-Version 1.0-rc1 (review candidate, merged package) · Owner: Student 1 · Reviewers: Student 3 (requirements, threats), Student 2 (fields, APIs)
+Version 1.0-rc1 (review candidate, merged package) · Author: Omar Hossam Wafa · Checked against S3 (requirements, threats) and S2 (fields, APIs)
 
 This document is the written part of work packages S1-T1 to S1-T4. The code in `vehicle/` is an
 executable version of the same behaviour, and `tests/` proves it. Machine-readable tables live in
@@ -107,7 +107,7 @@ Nothing reaches an ECU until every check passes, and the cheap checks run before
 10. Exact length and SHA-256 (SR-02)
 11. ECU stage, which repeats 5, 7 and 10
 
-### Use cases owned or co-owned by Student 1
+### Use cases owned or co-owned by S1
 
 | ID | Normal flow (result) | Exceptional flow | Tests |
 |---|---|---|---|
@@ -184,8 +184,8 @@ image or a verified new image under boot-attempt supervision.
 ## S1-T4 Vehicle threats and acceptance evidence
 
 Worksheet: the T-, F- and V- rows of `trace/threats.csv` (20 vehicle entries, STRIDE category, likelihood and impact with written
-rationale, prevention / detection / recovery, tests, residual risk). Scores are Student 1 drafts for
-Student 3 to moderate on W5-D3. The integrated register is in [generated/risk_register.md](generated/risk_register.md).
+rationale, prevention / detection / recovery, tests, residual risk). Scores are S1 drafts, to be
+moderated from the S3 view on W5-D3. The integrated register is in [generated/risk_register.md](generated/risk_register.md).
 
 | ID | Threat | L×I | Class | Test |
 |---|---|---|---|---|

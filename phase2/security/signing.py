@@ -1,4 +1,4 @@
-"""Simulated signing environment (Student 3, S3-T2; trust boundary TB-3).
+"""Simulated signing environment (S3-T2; trust boundary TB-3).
 
 The signing service holds private keys and is the only component that uses
 them. The online backend never sees key material; it asks the service to sign

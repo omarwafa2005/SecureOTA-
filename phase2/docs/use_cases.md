@@ -1,11 +1,11 @@
 # Use cases and quality-attribute scenarios
 
-Version 1.0-rc1. Owners follow guide Section 6. Student 3 reviews the abuse flows. Each use case uses
+Version 1.0-rc1. Owners follow guide Section 6. Abuse flows are reviewed from the S3 security view. Each use case uses
 the guide template: goal, actor, requirements, preconditions, normal flow, alternative, failure and
 abuse flows, postconditions with audit and state, and tests.
 
 The vehicle-side use cases UC-05 to UC-10 are also summarized in
-[student1_vehicle_spec.md](student1_vehicle_spec.md).
+[vehicle_spec.md](vehicle_spec.md).
 
 ---
 

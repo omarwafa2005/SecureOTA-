@@ -8,7 +8,7 @@ Simulation only. There is no real vehicle, CAN bus, flash driver, cloud deployme
 Phase 1 code (`../backend`, `../gateway`, `../ecu_simulator`) is unchanged.
 
 **Baseline status: version 1.0 review candidate. It is NOT approved yet.** Supervisor approval, the
-review meetings and the contribution statements are still to be done (see
+review meetings and the contribution statement are still to be done (see
 [docs/governance.md](docs/governance.md)).
 
 ## Run it from a clean checkout
@@ -48,7 +48,7 @@ After you change a CSV in `trace/`, run `python tools/build_docs.py` to regenera
 | Actor, asset and data dictionaries | [docs/SRS.md](docs/SRS.md) §2, [docs/generated/asset_inventory.md](docs/generated/asset_inventory.md), `trace/state_fields.csv` |
 | Use cases and quality-attribute scenarios | [docs/use_cases.md](docs/use_cases.md) |
 | Data-flow diagrams with trust boundaries | [docs/data_flows.md](docs/data_flows.md) |
-| Attacker model and security assumptions | [docs/student3_security_spec.md](docs/student3_security_spec.md) §1 |
+| Attacker model and security assumptions | [docs/security_spec.md](docs/security_spec.md) §1 |
 | STRIDE worksheets, attack trees, threat catalog | [docs/threat_model.md](docs/threat_model.md) |
 | Prioritized risk register | [docs/generated/risk_register.md](docs/generated/risk_register.md), source `trace/threats.csv` |
 | Standards traceability matrix | [docs/generated/standards_matrix.md](docs/generated/standards_matrix.md), source `trace/standards.csv` |
@@ -56,16 +56,19 @@ After you change a CSV in `trace/`, run `python tools/build_docs.py` to regenera
 | Master traceability matrix | [docs/generated/traceability_matrix.md](docs/generated/traceability_matrix.md), source `trace/traceability.csv` |
 | Review minutes, unresolved actions | [docs/governance.md](docs/governance.md) |
 | Security review report | [docs/security_review.md](docs/security_review.md) |
-| Contribution statements (one per student) | [docs/contribution_statements.md](docs/contribution_statements.md) (template, to be filled in) |
+| Contribution statement | [docs/contribution_statements.md](docs/contribution_statements.md) (template, to be filled in) |
 | Five-minute review presentation | [docs/presentation.md](docs/presentation.md) |
 
 ## Work packages
 
-| Student | Specification | Prototype and tests |
+The work is split into three workstreams, S1 to S3. The owner and reviewer columns in
+`trace/` record which workstream an item belongs to and which one it was checked against.
+
+| Workstream | Specification | Prototype and tests |
 |---|---|---|
-| S1 Vehicle, gateway and ECU | [docs/student1_vehicle_spec.md](docs/student1_vehicle_spec.md) | `vehicle/`, `tests/test_acceptance.py`, `test_attacks.py`, `test_faults.py`, `test_safety.py`, `walkthrough.py` |
-| S2 Backend, API and DevSecOps | [docs/student2_backend_spec.md](docs/student2_backend_spec.md) | `oem_backend/`, `tests/test_backend.py`, `run_all.py`, `tools/build_docs.py` |
-| S3 Security, research and verification | [docs/student3_security_spec.md](docs/student3_security_spec.md) | `security/`, `tests/test_security.py`, `tools/check_trace.py`, `tools/scan_secrets.py`, `tools/bench_verify.py` |
+| S1 Vehicle, gateway and ECU | [docs/vehicle_spec.md](docs/vehicle_spec.md) | `vehicle/`, `tests/test_acceptance.py`, `test_attacks.py`, `test_faults.py`, `test_safety.py`, `walkthrough.py` |
+| S2 Backend, API and DevSecOps | [docs/backend_spec.md](docs/backend_spec.md) | `oem_backend/`, `tests/test_backend.py`, `run_all.py`, `tools/build_docs.py` |
+| S3 Security, research and verification | [docs/security_spec.md](docs/security_spec.md) | `security/`, `tests/test_security.py`, `tools/check_trace.py`, `tools/scan_secrets.py`, `tools/bench_verify.py` |
 | All | [docs/threat_model.md](docs/threat_model.md), [docs/security_review.md](docs/security_review.md) | `tests/test_e2e.py`, `tests/fleet.py`, `e2e_trace.py` |
 
 ## Layout

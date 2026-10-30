@@ -1,6 +1,6 @@
-"""SecureOTA-V OEM backend (Student 2, Merged Phase 2).
+"""SecureOTA-V OEM backend (S2, Merged Phase 2).
 
-Feasibility prototype for docs/student2_backend_spec.md: domain model,
+Feasibility prototype for docs/backend_spec.md: domain model,
 authorization matrix, audit trail and API behavior. In-memory storage;
 not production code.
 """

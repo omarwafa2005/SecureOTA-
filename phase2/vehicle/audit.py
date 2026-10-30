@@ -1,7 +1,7 @@
 """Correlated, append-only audit events for the vehicle side (FR-06, NFR-02).
 
 Events carry correlation_id, component, action and outcome plus small
-non-secret fields (ecu_id, version, reason). Student 2 owns the backend
+non-secret fields (ecu_id, version, reason). The S2 backend owns the
 audit pipeline; this log is the vehicle-side evidence source for it.
 """
 from __future__ import annotations
