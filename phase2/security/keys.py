@@ -1,4 +1,4 @@
-"""Key roles and the root-signed trusted key set (Student 3, S3-T2).
+"""Key roles and the root-signed trusted key set (S3-T2).
 
 Three key roles, each authorized for exactly one purpose (SR-17):
 

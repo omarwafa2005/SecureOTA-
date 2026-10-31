@@ -1,4 +1,4 @@
-"""Key lifecycle, signing-service and secret-handling tests (Student 3).
+"""Key lifecycle, signing-service and secret-handling tests (S3).
 
 Docstring format: <test ID> | <threat IDs or -> | <requirement IDs>.
 """

@@ -231,7 +231,7 @@ class Gateway:
 
 
 def verify_manifest(envelope, trusted_vehicle_keys: Mapping) -> tuple[Optional[Reason], Optional[dict]]:
-    """Receiver-side manifest check (used by the backend; Student 2 integrates)."""
+    """Receiver-side manifest check (used by the backend; integrated in S2)."""
     reason, payload = verify_envelope(envelope, trusted_vehicle_keys)
     if reason:
         return reason, None

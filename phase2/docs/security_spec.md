@@ -1,7 +1,7 @@
-# SecureOTA-V Merged Phase 2 — Student 3: Security, Research and Verification
+# SecureOTA-V Merged Phase 2 — S3: Security, Research and Verification
 
-Version 1.0-rc1 (review candidate). Owner: Student 3. Reviewers: Student 2 (security requirements and
-key lifecycle), Students 1 and 2 (attacker realism for their components).
+Version 1.0-rc1 (review candidate). Author: Omar Hossam Wafa. Checked against S2 (security requirements and
+key lifecycle) and S1 and S2 (attacker realism for their components).
 
 This document covers work packages S3-T1 to S3-T4. `security/` holds the key-lifecycle prototype, and
 `tests/test_security.py` proves it. `tools/check_trace.py`, `tools/scan_secrets.py` and

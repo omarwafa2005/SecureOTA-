@@ -1,6 +1,6 @@
 # Data flows and trust boundaries
 
-Version 1.0-rc1. Owners: all. Student 3 reviews trust boundaries. The diagrams are Mermaid and render
+Version 1.0-rc1. Trust boundaries are reviewed from the S3 security view. The diagrams are Mermaid and render
 on GitHub and in VS Code.
 
 This document covers the six trust boundaries required by guide Section 3. For each one it lists what
@@ -128,7 +128,7 @@ Calls are in-process in Phase 2 (ASM-03). Message authentication on a real bus i
 | state.json commits, slot image writes, boot reads | Atomic replace; digest recorded per slot; only the inactive slot is written | SAF-01, SAF-02, SAF-06 to SAF-09, FR-05, FR-10 | F-03, F-04, V-03, V-04 |
 
 The checkpoint recovery matrix (12 checkpoints) is in
-[student1_vehicle_spec.md](student1_vehicle_spec.md) §S1-T3.
+[vehicle_spec.md](vehicle_spec.md) §S1-T3.
 
 ## Trusted vs untrusted data
 

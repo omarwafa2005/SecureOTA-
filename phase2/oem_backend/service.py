@@ -1,7 +1,7 @@
-"""OEM backend service layer (Student 2, S2-T1 to S2-T3).
+"""OEM backend service layer (S2-T1 to S2-T3).
 
 Concepts: Vehicle, ECU, Artifact, Release, Campaign, Assignment, Manifest,
-AuditEvent (see docs/student2_backend_spec.md for the data model).
+AuditEvent (see docs/backend_spec.md for the data model).
 
 Rules this module enforces:
   * every public method takes a Principal and a correlation ID, checks the

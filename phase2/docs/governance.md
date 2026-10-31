@@ -1,9 +1,10 @@
 # Governance: review plan, decisions, changes and evidence
 
-Maintained by Student 2 (S2-T4). Every artifact in this phase has an owner, a reviewer, a version and a
-status.
+Part of the S2 workstream (S2-T4). Every artifact in this phase has an owner, a reviewer, a version and a
+status. S1 (vehicle, gateway and ECU), S2 (backend, API and DevSecOps) and S3 (security, research and
+verification) are workstreams; the reviewer column names the workstream an artifact was checked against.
 
-> Sections marked **To be filled** record things that only the team and the supervisor can do:
+> Sections marked **To be filled** record things that only the author and the supervisor can do:
 > meetings, approvals and signatures. They are deliberately left blank. Do not fill them in until the
 > event has happened.
 
@@ -11,9 +12,9 @@ status.
 
 | Artifact | Version | Author | Mandatory reviewer | Status |
 |---|---|---|---|---|
-| Vehicle requirements and state model ([student1_vehicle_spec.md](student1_vehicle_spec.md)) | 0.9 → 1.0-rc1 | S1 | S3 | Review candidate |
-| Backend APIs and data concepts ([student2_backend_spec.md](student2_backend_spec.md)) | 1.0-rc1 | S2 | S1 | Review candidate |
-| Security requirements and key lifecycle ([student3_security_spec.md](student3_security_spec.md)) | 1.0-rc1 | S3 | S2 | Review candidate |
+| Vehicle requirements and state model ([vehicle_spec.md](vehicle_spec.md)) | 0.9 → 1.0-rc1 | S1 | S3 | Review candidate |
+| Backend APIs and data concepts ([backend_spec.md](backend_spec.md)) | 1.0-rc1 | S2 | S1 | Review candidate |
+| Security requirements and key lifecycle ([security_spec.md](security_spec.md)) | 1.0-rc1 | S3 | S2 | Review candidate |
 | Vehicle threats and safety risks (V-, F-, vehicle T- rows) | 1.0-rc1 | S1 | S3 | Draft, awaiting workshop |
 | Backend threats and authorization risks (B- rows, T-10, T-12) | 1.0-rc1 | S2 | S3 | Draft, awaiting workshop |
 | Traceability matrix (`trace/traceability.csv`) | 1.0-rc1 | S3 | S1 and S2 | Automated checks pass |
@@ -33,7 +34,7 @@ status.
 | P2-07 | Risk rationale | Rationale columns in `threats.csv`; scoring workshop | Rationale present; workshop **to be done** |
 | P2-08 | Control completeness | `check_trace.py` | Pass |
 | P2-09 | Standards claim review | `check_trace.py` wording rule + human review | Automated part passes; UN R156 clause check open (A-03) |
-| P2-10 | Contract consistency | Field contract in [student2_backend_spec.md](student2_backend_spec.md) §2, E2E-01 | E2E-01 passes; S1 field-by-field review **to be done** |
+| P2-10 | Contract consistency | Field contract in [backend_spec.md](backend_spec.md) §2, E2E-01 | E2E-01 passes; S1 field-by-field review **to be done** |
 | P2-11 | Clean reproduction | §6 | **To be done** by S1 and S3 |
 | P2-12 | Supervisor baseline review | §7 | **To be done** |
 
@@ -71,7 +72,7 @@ No guide baseline Must requirement has been removed.
 
 | Version | Date | Change | Author | Reviewer |
 |---|---|---|---|---|
-| 0.9 | | Student 1 vehicle package (27 requirements, 20 threats, 39 tests) | S1 | |
+| 0.9 | | Vehicle package (27 requirements, 20 threats, 39 tests) | S1 | |
 | 1.0-rc1 | | Merged package: backend and security requirements and threats, assets, standards, full matrix, docs, 72 tests | | |
 
 After baseline approval, every change to a Must requirement, a high-risk score, a public contract or a
@@ -95,8 +96,7 @@ security assumption needs a row here plus an issue ID.
 
 | Reproduced by | Date | OS / Python | Commit | Commands | Result |
 |---|---|---|---|---|---|
-| Student 1 | | | | `git clone …; pip install -r requirements.txt; cd phase2; python run_all.py` | |
-| Student 3 | | | | same | |
+| Omar Hossam Wafa | | | | `git clone …; pip install -r requirements.txt; cd phase2; python run_all.py` | |
 
 ## 7 Supervisor baseline review — **to be filled**
 
@@ -111,10 +111,10 @@ security assumption needs a row here plus an issue ID.
 
 | ID | Action | Owner | Due |
 |---|---|---|---|
-| A-01 | Run the scoring workshop and confirm or change every score; record it in §3 | S3 (all attend) | W5-D3 |
+| A-01 | Run the scoring workshop and confirm or change every score; record it in §3 | S3 | W5-D3 |
 | A-02 | Field-by-field contract review of backend ↔ vehicle (P2-10) | S1 | W6-D1 |
 | A-03 | Confirm UN R156 clause references against the public UNECE text before citing them | S3 | W6-D3 |
-| A-04 | Clean reproduction from a fresh clone by S1 and S3 (P2-11) | S1, S3 | W6-D4 |
-| A-05 | Fill in contribution statements | each student | W6-D4 |
-| A-06 | Record the 5-minute presentation backup walkthrough | all | W6-D4 |
+| A-04 | Clean reproduction from a fresh clone (P2-11) | author | W6-D4 |
+| A-05 | Fill in the contribution statement | author | W6-D4 |
+| A-06 | Record the 5-minute presentation backup walkthrough | author | W6-D4 |
 | A-07 | Supervisor decisions D-04, D-05, D-06 to D-12 | supervisor | W6-D5 |

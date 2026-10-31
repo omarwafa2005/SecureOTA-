@@ -1,6 +1,6 @@
 # Security review report — Merged Phase 2
 
-Version 1.0-rc1. Author: Student 3. Reviewers: Students 1 and 2. Decision-maker for §4: the supervisor.
+Version 1.0-rc1. Author: Omar Hossam Wafa (S3). Checked against the S1 vehicle and S2 backend work. Decision-maker for §4: the supervisor.
 
 ## 1 Scope and method
 
@@ -80,6 +80,5 @@ transport as untrusted (ASM-05).
 
 | Reviewer | Verdict (accepted / accepted with action / rejected) | Comments | Date |
 |---|---|---|---|
-| Student 1 | | | |
-| Student 2 | | | |
+| Omar Hossam Wafa | | | |
 | Supervisor | | | |

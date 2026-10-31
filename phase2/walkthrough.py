@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Student 1 reproducible five-test walkthrough (Week 6 evidence, review slot 0:00-1:00).
+"""S1 reproducible five-test walkthrough (Week 6 evidence, review slot 0:00-1:00).
 
 Usage:  python walkthrough.py [--evidence evidence/walkthrough]
 

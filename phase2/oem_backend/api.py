@@ -1,4 +1,4 @@
-"""HTTP API over BackendService (Student 2, S2-T1 API behavior catalog).
+"""HTTP API over BackendService (S2-T1 API behavior catalog).
 
 Every response carries the correlation ID in the body and in the
 X-Correlation-ID header (NFR-02). Errors use the stable categories in

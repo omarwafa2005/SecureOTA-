@@ -24,7 +24,7 @@ firmware version on every ECU, with every decision traceable to evidence.
 The claims are limited to the simulated test bench. Nothing here claims certification, type approval
 or conformance with UN R156, ISO 24089, ISO/SAE 21434 or any other standard (see
 [generated/standards_matrix.md](generated/standards_matrix.md)). Tested claims and future claims are
-kept apart in [student3_security_spec.md](student3_security_spec.md) §1.4.
+kept apart in [security_spec.md](security_spec.md) §1.4.
 
 ### 1.3 Definitions
 
@@ -108,7 +108,7 @@ The trust-boundary diagrams are in [data_flows.md](data_flows.md).
 
 ### 2.4 Assumptions and constraints
 
-The full register is in [student3_security_spec.md](student3_security_spec.md) §1.3. The key items:
+The full register is in [security_spec.md](security_spec.md) §1.3. The key items:
 
 - **ASM-01:** The gateway has a trusted clock.
 - **ASM-02:** The root key is offline and is provisioned into the vehicle at the factory.
@@ -124,7 +124,7 @@ The full register is in [student3_security_spec.md](student3_security_spec.md) �
   rule): `trace/state_fields.csv`.
 - Assets with their confidentiality, integrity and availability needs:
   [generated/asset_inventory.md](generated/asset_inventory.md).
-- Backend entities and fields: [student2_backend_spec.md](student2_backend_spec.md) §1.
+- Backend entities and fields: [backend_spec.md](backend_spec.md) §1.
 
 ## 3 Requirements
 
@@ -201,7 +201,5 @@ edits to the generated tables.
 
 | Role | Name | Decision | Date |
 |---|---|---|---|
-| Student 1 | | | |
-| Student 2 | | | |
-| Student 3 | | | |
+| Author (Omar Hossam Wafa) | | | |
 | Supervisor | | | |

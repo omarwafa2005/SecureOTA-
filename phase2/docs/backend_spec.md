@@ -1,7 +1,7 @@
-# SecureOTA-V Merged Phase 2 — Student 2: Backend, API and DevSecOps
+# SecureOTA-V Merged Phase 2 — S2: Backend, API and DevSecOps
 
-Version 1.0-rc1 (review candidate). Owner: Student 2. Reviewers: Student 1 (vehicle-facing fields),
-Student 3 (privileged actions, audit, security boundaries).
+Version 1.0-rc1 (review candidate). Author: Omar Hossam Wafa. Checked against S1 (vehicle-facing fields)
+and S3 (privileged actions, audit, security boundaries).
 
 This document covers work packages S2-T1 to S2-T4. `oem_backend/` is an executable version of the same
 behavior and `tests/test_backend.py` and `tests/test_e2e.py` prove it. The storage is in memory. A real

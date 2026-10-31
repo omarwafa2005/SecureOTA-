@@ -1,4 +1,4 @@
-"""Backend acceptance and negative tests (Student 2).
+"""Backend acceptance and negative tests (S2).
 
 Docstring format: <test ID> | <threat IDs or -> | <requirement IDs>.
 """

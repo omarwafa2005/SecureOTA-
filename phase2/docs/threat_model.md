@@ -1,6 +1,6 @@
 # Threat model: STRIDE worksheets, attack trees and threat catalog
 
-Version 1.0-rc1. Lead: Student 3. Vehicle rows: Student 1. Backend rows: Student 2.
+Version 1.0-rc1. Author: Omar Hossam Wafa. Vehicle rows come from S1, backend rows from S2, integrated in S3.
 
 The catalog and scores are in `trace/threats.csv`. The sorted register with written rationale is in
 [generated/risk_register.md](generated/risk_register.md).
@@ -21,7 +21,7 @@ The catalog and scores are in `trace/threats.csv`. The sorted register with writ
   1. Take each process, data store, external actor and flow in [data_flows.md](data_flows.md).
   2. Ask the six STRIDE questions for it.
   3. Record each threat with the attacker from the attacker model
-     ([student3_security_spec.md](student3_security_spec.md) §1).
+     ([security_spec.md](security_spec.md) §1).
   4. Merge duplicates.
   5. Score likelihood and impact from 1 to 5, each with a written reason.
 - **Scoring:** Risk = Likelihood × Impact. Critical is 15–25, High 10–14, Medium 5–9, Low 1–4.
