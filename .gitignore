@@ -17,3 +17,7 @@ ecu_simulator/slot_b/*
 phase2/evidence/
 *.pem
 *.key
+
+# Demo console web UI (install with: cd console/web && npm install)
+console/web/node_modules/
+console/web/dist/
